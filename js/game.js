@@ -6,6 +6,16 @@
 // Created on: April 2023
 /**
 *Start Phaser Game
+*/
+
+// scene importt statements
+import SplashScene from "./SplashScene.js"
+
+//create the new svene
+const SplashScene = new SplashScene()
+
+/**
+ * Start Phaser Game
  */
 const config = {
   type: Phaser.ATUO,
@@ -26,4 +36,11 @@ const config = {
 }
 
 const game = new Phaser.Game(config)
-console.log(game)
+//console.log(game)
+
+//load scenes
+//Note: remember any"key" is lobal an can Not be reused
+game.scene.add("SplashScene", SplashScene)
+
+//the start scene
+game.scene.start("SplashScene")
