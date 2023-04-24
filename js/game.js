@@ -10,9 +10,11 @@
 
 // scene importt statements
 import SplashScene from "./splashScene.js"
+import TitleScene from "./titleScene.js"
 
 //create the new svene
 const splashScene = new SplashScene()
+const titleScene = new TitleScene()
 
 /**
  * Start Phaser Game
@@ -27,7 +29,7 @@ const config = {
       debug: false,
     },
   },
-
+//set background color
   backgroundColor: 0x5f6e7a,
   scale: {
     mode: Phaser.Scale.FIT,
@@ -41,6 +43,7 @@ const game = new Phaser.Game(config)
 //load scenes
 //Note: remember any"key" is lobal an can Not be reused
 game.scene.add("SplashScene", splashScene)
+game.scene.add("TitleScene", titleScene)
 
 //the start scene
 game.scene.start("SplashScene")
