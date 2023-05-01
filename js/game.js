@@ -11,10 +11,12 @@
 // scene importt statements
 import SplashScene from "./splashScene.js"
 import TitleScene from "./titleScene.js"
+import MenuScene from "./menuScene.js"
 
 //create the new svene
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
+const menuScene = new MenuScene()
 
 /**
  * Start Phaser Game
@@ -26,7 +28,7 @@ const config = {
   physics: {
     default: "arcade",
     arcade: {
-      debug: false,
+      debug: true,
     },
   },
 //set background color
@@ -44,6 +46,7 @@ const game = new Phaser.Game(config)
 //Note: remember any"key" is lobal an can Not be reused
 game.scene.add("SplashScene", splashScene)
 game.scene.add("TitleScene", titleScene)
+game.scene.add("MenuScene", menuScene)
 
 //the start scene
 game.scene.start("SplashScene")
