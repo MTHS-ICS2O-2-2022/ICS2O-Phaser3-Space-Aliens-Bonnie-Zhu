@@ -12,11 +12,13 @@
 import SplashScene from "./splashScene.js"
 import TitleScene from "./titleScene.js"
 import MenuScene from "./menuScene.js"
+import GameScene from "./gameScene.js"
 
 //create the new svene
 const splashScene = new SplashScene()
 const titleScene = new TitleScene()
 const menuScene = new MenuScene()
+const gameScene = new GameScene()
 
 /**
  * Start Phaser Game
@@ -44,9 +46,10 @@ const game = new Phaser.Game(config)
 
 //load scenes
 //Note: remember any"key" is lobal an can Not be reused
-game.scene.add("SplashScene", splashScene)
-game.scene.add("TitleScene", titleScene)
-game.scene.add("MenuScene", menuScene)
+game.scene.add("splashScene", splashScene)
+game.scene.add("titleScene", titleScene)
+game.scene.add("menuScene", menuScene)
+game.scene.add("gameScene", gameScene)
 
 //the start scene
 game.scene.start("SplashScene")
